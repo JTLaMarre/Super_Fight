@@ -7,22 +7,33 @@ export function selectWinnerComponent() {
     let setTwoPerson = 'Person 2';
     let setTwoWeapon = 'Weapon 2';
     let location = 'A box'
+    let backColor = '';
 
+    if ((counter % 3) == 0){
+        backColor = '#fc49ab'
+    } else if((counter % 3) == 1){
+        backColor = '#ff7300'
+
+    } else if((counter % 3) == 2){
+        backColor = '#5fe8ff'
+    }
+    
+    document.documentElement.style.backgroundColor=backColor
     return (
-        <div class=' is-flex is-flex-direction-column is-align-items-center is-align-content-center'>
+        <div class=' is-flex is-flex-direction-column is-align-items-center  '>
             <h1 class='title '> Round {counter}</h1>
             <h2 class='title is-4 pb-6'> Location: {location}</h2>
             <div class="tile is-ancestor is-5">
-                <div class="tile is-parent">
-                    <article class="tile is-child box  ">
-                        <p class="title is-size-4">{setOnePerson}</p>
+                <div class="  tile is-parent">
+                    <article class="yellow tile is-child box  ">
+                        <p class=" title is-size-4">{setOnePerson}</p>
                         <div class="content pb-6">
 
                         </div>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box">
+                    <article class="tile is-child box yellow">
                         <p class="title is-size-4">{setOneWeapon}</p>
 
                     </article>
@@ -32,7 +43,7 @@ export function selectWinnerComponent() {
             <h1 class='title '> VS.</h1>
             <div class="tile is-ancestor is-5">
                 <div class="tile is-parent">
-                    <article class="tile is-child box ">
+                    <article class="tile is-child box green">
                         <p class="title is-size-4">{setTwoPerson}</p>
                         <div class="content pb-6">
 
@@ -40,7 +51,7 @@ export function selectWinnerComponent() {
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box">
+                    <article class="tile is-child box green">
                         <p class="title is-size-4">{setTwoWeapon}</p>
 
                     </article>
@@ -48,9 +59,8 @@ export function selectWinnerComponent() {
             </div>
             <h2 class='title is-5 pt-6'> Choose a Winner</h2>
             <div class='buttons are-medium'>
-                
-                <button class="button">{setOnePerson}</button>
-                <button class="button"> {setTwoPerson}</button>
+                <button class="button yellow is-rounded">{setOnePerson}</button>
+                <button class="button green is-rounded"> {setTwoPerson}</button>
             </div>
 
 
