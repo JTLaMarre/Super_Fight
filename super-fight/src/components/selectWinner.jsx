@@ -20,7 +20,7 @@ export function selectWinnerComponent() {
     
     document.documentElement.style.backgroundColor=backColor
     return (
-        <div class=' is-flex is-flex-direction-column is-align-items-center  '>
+        <div class=' is-flex is-flex-direction-column is-align-items-center mt-5 '>
             <h1 class='title '> Round {counter}</h1>
             <h2 class='title is-4 pb-6'> Location: {location}</h2>
             <div class="tile is-ancestor is-5">
