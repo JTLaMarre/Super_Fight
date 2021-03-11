@@ -5,9 +5,9 @@ function Winner() {
 
     return (
         <div>
-            <h1>Winner!</h1>
+            <h1 class='title'>Winner!</h1>
             <p>XYZ with weapon ABC</p>
-            <Link to=''><button>Continue</button></Link>
+            <Link to='/select'><button>Continue</button></Link>
         </div>
     )
 }
