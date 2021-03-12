@@ -3,7 +3,7 @@ import React, { createContext } from 'react';
 import RouterComponent from './routing.component';
 
 export const UserContext = createContext();
-const winner={ winnerPerson:'winnerPerson', winnerWeapon:'winnerWeapon',location: 'location', counter:0, people:[], weapons:[]}
+const anyname={ winnerPerson:'winnerPerson', winnerWeapon:'winnerWeapon',location: 'The Ocean', counter:0, people:['Batman', 'Freddy Fazbear'], weapons:['A balloon', 'A brick']}
 
 function App() {
   return (

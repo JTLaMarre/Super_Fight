@@ -4,17 +4,17 @@ import { UserContext } from '../App';
 
 export function SelectWinnerComponent() {
     const data = useContext(UserContext);
-    let counter = data.counter;
-    
+    let counter =1;
+
     let personOneIndex = Math.floor(Math.random()*data.people.length);
-    let setOnePerson = data.people.splice(personOneIndex,1);
+    let setOnePerson = 'Batman'
     let weaponOneIndex = Math.floor(Math.random()*data.weapons.length);
-    let setOneWeapon = data.weapons.splice(weaponOneIndex,1);
+    let setOneWeapon = 'A brick';
 
     let personTwoIndex = Math.floor(Math.random()*data.people.length)
-    let setTwoPerson = data.people.splice(personTwoIndex,1);
+    let setTwoPerson = 'Inflatable Balloon Man'
     let weaponTwoIndex = Math.floor(Math.random()*data.weapons.length);
-    let setTwoWeapon = data.weapons.splice(weaponTwoIndex,1);
+    let setTwoWeapon = 'A crowbar';
 
     let location = data.location;
     let backColor = '';
@@ -73,7 +73,7 @@ export function SelectWinnerComponent() {
                 <button class="button green is-rounded"> {setTwoPerson}</button>
             </div>
 
-            {data.counter++}
+            
         </div>
 
     )

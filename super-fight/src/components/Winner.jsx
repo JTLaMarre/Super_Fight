@@ -14,7 +14,7 @@ function Winner() {
 
     return (
         <div class=' is-flex is-flex-direction-column is-align-items-center mt-5 '>
-            <h1 class='title '>The Winner is ...{JSON.stringify(value123)}</h1>
+            <h1 class='title '>The Winner is ...</h1>
             <h2 class='title is-4 pb-6'>{winnerPerson} with {winnerWeapon} at {location}!</h2>
             <Link to=''><button class="button orange is-rounded"> Next Round</button></Link>
         </div>
