@@ -1,6 +1,6 @@
-import React, {UserContext} from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import { UserContext } from './App';
+import { UserContext } from '../App';
 
 function Winner() {
     let winnerPerson = 'Person';

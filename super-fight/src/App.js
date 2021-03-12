@@ -9,7 +9,9 @@ b: 'bbb', c: 'ccc'}
 function App() {
   return (
     <div className='container'>
-      <RouterComponent></RouterComponent>
+      <UserContext.Provider value={anyname}>
+        <RouterComponent></RouterComponent>
+      </UserContext.Provider> 
     </div>
   );
 }
