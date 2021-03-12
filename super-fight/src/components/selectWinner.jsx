@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function selectWinnerComponent() {
+export function SelectWinnerComponent() {
     let counter = 0;
     let setOnePerson = 'Person 1';
     let setOneWeapon = 'Weapon 1';
