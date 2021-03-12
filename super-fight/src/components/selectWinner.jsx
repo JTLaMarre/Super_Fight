@@ -1,24 +1,34 @@
-import React from 'react';
+
+import React, {useContext} from 'react';
+import { UserContext } from '../App';
 
 export function SelectWinnerComponent() {
-    let counter = 0;
-    let setOnePerson = 'Person 1';
-    let setOneWeapon = 'Weapon 1';
-    let setTwoPerson = 'Person 2';
-    let setTwoWeapon = 'Weapon 2';
-    let location = 'A box'
+    const data = useContext(UserContext);
+    let counter = data.counter;
+    
+    let personOneIndex = Math.floor(Math.random()*data.people.length);
+    let setOnePerson = data.people.splice(personOneIndex,1);
+    let weaponOneIndex = Math.floor(Math.random()*data.weapons.length);
+    let setOneWeapon = data.weapons.splice(weaponOneIndex,1);
+
+    let personTwoIndex = Math.floor(Math.random()*data.people.length)
+    let setTwoPerson = data.people.splice(personTwoIndex,1);
+    let weaponTwoIndex = Math.floor(Math.random()*data.weapons.length);
+    let setTwoWeapon = data.weapons.splice(weaponTwoIndex,1);
+
+    let location = data.location;
     let backColor = '';
 
-    if ((counter % 3) == 0){
+    if ((counter % 3) == 0) {
         backColor = '#fc49ab'
-    } else if((counter % 3) == 1){
+    } else if ((counter % 3) == 1) {
         backColor = '#ff7300'
 
-    } else if((counter % 3) == 2){
+    } else if ((counter % 3) == 2) {
         backColor = '#5fe8ff'
     }
-    
-    document.documentElement.style.backgroundColor=backColor
+
+    document.documentElement.style.backgroundColor = backColor
     return (
         <div class=' is-flex is-flex-direction-column is-align-items-center mt-5 '>
             <h1 class='title '> Round {counter}</h1>
@@ -63,8 +73,9 @@ export function SelectWinnerComponent() {
                 <button class="button green is-rounded"> {setTwoPerson}</button>
             </div>
 
-
+            {data.counter++}
         </div>
+
     )
 
 }

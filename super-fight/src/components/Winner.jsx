@@ -3,11 +3,12 @@ import {Link} from 'react-router-dom';
 import { UserContext } from '../App';
 
 function Winner() {
-    let winnerPerson = 'Person';
-    let winnerWeapon = 'Weapon';
-    let location = 'Place'
+    const data = useContext(UserContext); // value123 is a value passed from the App.js
+    let winnerPerson = data.winnerPerson;
+    let winnerWeapon = data.winnerWeapon;
+    let location = data.location;
 
-    const value123 = useContext(UserContext); // value123 is a value passed from the App.js
+    
     
     document.documentElement.style.backgroundColor='#64ff00';
 
